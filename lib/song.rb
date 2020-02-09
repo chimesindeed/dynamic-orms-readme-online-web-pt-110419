@@ -23,11 +23,6 @@ class Song
   self.column_names.each do |col_name|
     attr_accessor col_name.to_sym
   end
-  def initialize(id = nil, name, album)
-    @id = id
-    @name = name
-    @album = album
-  end
   
   def self.create_table
     sql = <<-SQL
